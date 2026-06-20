@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">FOMO app icon</title>
+<desc id="desc">Original blue chat bubble with a white and orange market-flow line.</desc>
+<rect width="512" height="512" rx="112" fill="#006BB6"/>
+<path d="M92 104 H420 Q448 104 448 132 V338 Q448 366 420 366 H258 L164 436 V366 H92 Q64 366 64 338 V132 Q64 104 92 104 Z"
+      fill="white" opacity="0.12"/>
+<path d="M100 326 L178 244 L244 278 L332 162 L410 210"
+      fill="none" stroke="white" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="100" cy="326" r="19" fill="white"/>
+<circle cx="178" cy="244" r="19" fill="white"/>
+<circle cx="244" cy="278" r="19" fill="white"/>
+<circle cx="332" cy="162" r="23" fill="#F58426" stroke="white" stroke-width="10"/>
+<path d="M372 163 L425 188 L397 239" fill="none" stroke="#F58426" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

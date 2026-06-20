@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">FOMO finance market intelligence logo</title>
+<desc id="desc">Original blue, white and orange logo combining a chat bubble with a market-flow line.</desc>
+<rect width="1200" height="360" fill="white"/>
+<!-- Original chat/market icon -->
+<path d="M70 55 H260 Q300 55 300 95 V230 Q300 270 260 270 H170 L108 318 V270 H70 Q30 270 30 230 V95 Q30 55 70 55 Z"
+      fill="#006BB6"/>
+<path d="M78 220 L122 178 L160 197 L211 125 L254 153"
+      fill="none" stroke="white" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="78" cy="220" r="12" fill="white"/>
+<circle cx="122" cy="178" r="12" fill="white"/>
+<circle cx="160" cy="197" r="12" fill="white"/>
+<circle cx="211" cy="125" r="12" fill="#F58426" stroke="white" stroke-width="7"/>
+<path d="M236 124 L264 137 L249 164" fill="none" stroke="#F58426" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- Wordmark with restrained sports-inspired offset -->
+<text x="354" y="203" font-family="Inter, Arial, Helvetica, sans-serif" font-size="150" font-weight="900"
+      letter-spacing="-7" fill="#F58426" opacity="0.98">FOMO</text>
+<text x="344" y="193" font-family="Inter, Arial, Helvetica, sans-serif" font-size="150" font-weight="900"
+      letter-spacing="-7" fill="#006BB6">FOM</text>
+<text x="688" y="193" font-family="Inter, Arial, Helvetica, sans-serif" font-size="150" font-weight="900"
+      letter-spacing="-7" fill="#F58426">O</text>
+<rect x="347" y="218" width="522" height="10" rx="5" fill="#F58426"/>
+<text x="348" y="270" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" font-weight="700"
+      letter-spacing="1.6" fill="#17243A">FINANZAS · OBSERVACIÓN · MERCADO · OPINIÓN</text>
+<text x="348" y="310" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24"
+      fill="#5F6B7A">Información de mercado, sin recomendaciones de inversión</text>
+</svg>

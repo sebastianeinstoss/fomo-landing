@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FOMO democratiza el acceso a información clara sobre fondos comunes de inversión, actividad de mercado y opiniones profesionales en Argentina.">
+  <meta name="theme-color" content="#006bb6">
+  <meta name="color-scheme" content="light">
+
+  <title>FOMO | Información para entender el mercado</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <style>
+    :root {
+      --azul: #006bb6;
+      --azul-oscuro: #17243a;
+      --azul-suave: #eaf5fc;
+      --naranja: #f58426;
+      --texto: #243047;
+      --texto-secundario: #5f6b7a;
+      --borde: #dce5ee;
+      --fondo: #f5f8fb;
+      --blanco: #ffffff;
+      --sombra: 0 24px 70px rgba(23, 36, 58, 0.12);
+      --radio-grande: 30px;
+      --radio: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--texto);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(0, 107, 182, 0.12), transparent 30rem),
+        radial-gradient(circle at 92% 90%, rgba(245, 132, 38, 0.11), transparent 28rem),
+        var(--fondo);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .pagina {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    .panel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid rgba(220, 229, 238, 0.95);
+      border-radius: var(--radio-grande);
+      box-shadow: var(--sombra);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 7px;
+      background: linear-gradient(90deg, var(--azul) 0 72%, var(--naranja) 72% 100%);
+    }
+
+    .contenido {
+      padding: clamp(34px, 7vw, 78px);
+    }
+
+    .marca {
+      margin: 0 auto clamp(32px, 5vw, 52px);
+      width: min(760px, 100%);
+    }
+
+    .marca-escritorio {
+      width: 100%;
+      height: auto;
+    }
+
+    .marca-movil {
+      display: none;
+      width: 118px;
+      height: 118px;
+      margin: 0 auto;
+      border-radius: 28px;
+      box-shadow: 0 14px 32px rgba(0, 107, 182, 0.18);
+    }
+
+    .introduccion {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .estado {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 18px;
+      padding: 8px 13px;
+      border: 1px solid rgba(0, 107, 182, 0.18);
+      border-radius: 999px;
+      color: var(--azul);
+      background: var(--azul-suave);
+      font-size: 0.79rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .estado::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--naranja);
+      box-shadow: 0 0 0 5px rgba(245, 132, 38, 0.13);
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto 20px;
+      color: var(--azul-oscuro);
+      font-size: clamp(2.15rem, 5.8vw, 4.9rem);
+      line-height: 1.01;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+
+    .destacado {
+      color: var(--azul);
+    }
+
+    .bajada {
+      max-width: 770px;
+      margin: 0 auto;
+      color: var(--texto-secundario);
+      font-size: clamp(1.05rem, 2.1vw, 1.33rem);
+      line-height: 1.68;
+      text-wrap: pretty;
+    }
+
+    .bajada strong {
+      color: var(--texto);
+    }
+
+    .principio {
+      max-width: 760px;
+      margin: 26px auto 0;
+      padding: 17px 20px;
+      border-left: 4px solid var(--naranja);
+      border-radius: 0 14px 14px 0;
+      color: var(--texto);
+      background: #fff8f2;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .fuentes {
+      max-width: 900px;
+      margin: clamp(42px, 7vw, 70px) auto 0;
+      padding-top: clamp(32px, 5vw, 48px);
+      border-top: 1px solid var(--borde);
+    }
+
+    .fuentes-encabezado {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .fuentes-encabezado h2 {
+      margin: 0 0 9px;
+      color: var(--azul-oscuro);
+      font-size: clamp(1.35rem, 3vw, 1.85rem);
+      letter-spacing: -0.025em;
+    }
+
+    .fuentes-encabezado p {
+      margin: 0;
+      color: var(--texto-secundario);
+      line-height: 1.55;
+    }
+
+    .grilla-fuentes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .fuente {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      align-items: center;
+      gap: 22px;
+      min-height: 150px;
+      padding: 24px;
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      background: var(--blanco);
+      box-shadow: 0 10px 28px rgba(23, 36, 58, 0.06);
+    }
+
+    .fuente-logo {
+      display: grid;
+      place-items: center;
+      min-height: 88px;
+      padding: 13px;
+      border-radius: 14px;
+      background: #f8fafc;
+    }
+
+    .fuente-logo img {
+      width: 100%;
+      max-width: 150px;
+      max-height: 62px;
+      object-fit: contain;
+    }
+
+    .fuente h3 {
+      margin: 0 0 7px;
+      color: var(--azul-oscuro);
+      font-size: 1.05rem;
+    }
+
+    .fuente p {
+      margin: 0;
+      color: var(--texto-secundario);
+      font-size: 0.93rem;
+      line-height: 1.52;
+    }
+
+    footer {
+      padding: 22px clamp(24px, 6vw, 64px) 28px;
+      border-top: 1px solid var(--borde);
+      color: #748091;
+      background: #fbfcfe;
+      font-size: 0.78rem;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    footer strong {
+      color: var(--texto-secundario);
+    }
+
+    @media (max-width: 820px) {
+      .grilla-fuentes {
+        grid-template-columns: 1fr;
+      }
+
+      .fuente {
+        grid-template-columns: 145px 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .pagina {
+        width: min(100% - 20px, 1120px);
+        padding: 10px 0;
+        align-items: start;
+      }
+
+      .panel {
+        border-radius: 22px;
+      }
+
+      .contenido {
+        padding: 38px 20px 30px;
+      }
+
+      .marca {
+        margin-bottom: 28px;
+      }
+
+      .marca-escritorio {
+        display: none;
+      }
+
+      .marca-movil {
+        display: block;
+      }
+
+      .estado {
+        font-size: 0.7rem;
+      }
+
+      h1 {
+        font-size: clamp(2.15rem, 12vw, 3.25rem);
+      }
+
+      .bajada {
+        font-size: 1rem;
+        line-height: 1.62;
+      }
+
+      .principio {
+        padding: 15px 16px;
+        font-size: 0.9rem;
+      }
+
+      .fuentes {
+        margin-top: 40px;
+        padding-top: 30px;
+      }
+
+      .fuente {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .fuente-logo {
+        min-height: 76px;
+      }
+
+      footer {
+        padding: 20px 18px 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .panel {
+        animation: entrada 650ms ease-out both;
+      }
+
+      @keyframes entrada {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="pagina">
+    <article class="panel" aria-labelledby="titulo-principal">
+      <div class="contenido">
+        <header class="marca" aria-label="FOMO">
+          <img class="marca-escritorio" src="assets/fomo-logo.svg" alt="FOMO — Finanzas, Observación, Mercado y Opinión">
+          <img class="marca-movil" src="assets/fomo-icon.svg" alt="Logo de FOMO">
+        </header>
+
+        <section class="introduccion">
+          <div class="estado">Proyecto en desarrollo</div>
+
+          <h1 id="titulo-principal">
+            Entender qué está haciendo el mercado, <span class="destacado">con información clara.</span>
+          </h1>
+
+          <p class="bajada">
+            <strong>FOMO</strong> será una plataforma de información financiera para personas que ahorran en Argentina. Analizará cómo se mueve el dinero entre distintas familias de Fondos Comunes de Inversión, dónde aparece actividad de mercado fuera de lo habitual y cómo describen el escenario fuentes profesionales autorizadas.
+          </p>
+
+          <p class="principio">
+            FOMO explicará hechos, indicadores y opiniones con sus fechas, fuentes y limitaciones. <strong>No brindará recomendaciones personalizadas, no administrará dinero y no indicará qué comprar, vender o mantener.</strong>
+          </p>
+        </section>
+
+        <section class="fuentes" aria-labelledby="titulo-fuentes">
+          <div class="fuentes-encabezado">
+            <h2 id="titulo-fuentes">Fuentes de datos previstas</h2>
+            <p>La primera versión se desarrollará con información pública y/o debidamente autorizada.</p>
+          </div>
+
+          <div class="grilla-fuentes">
+            <article class="fuente">
+              <div class="fuente-logo">
+                <!-- Reemplazar este archivo por el logo oficial de CAFCI, conservando el nombre. -->
+                <img src="assets/cafci-logo.png" alt="Logo de CAFCI">
+              </div>
+              <div>
+                <h3>Fondos Comunes de Inversión</h3>
+                <p>Información de CAFCI sobre patrimonio, cuotapartes, valores de cuotaparte, categorías y composición de fondos.</p>
+              </div>
+            </article>
+
+            <article class="fuente">
+              <div class="fuente-logo">
+                <!-- Reemplazar este archivo por el logo oficial de BYMA, conservando el nombre. -->
+                <img src="assets/byma-logo.png" alt="Logo de BYMA">
+              </div>
+              <div>
+                <h3>Mercado de capitales</h3>
+                <p>Información de BYMA sobre instrumentos, precios, volumen y monto negociado para detectar actividad inusual.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <strong>FOMO · Finanzas, Observación, Mercado y Opinión.</strong><br>
+        Proyecto informativo independiente. La mención de BYMA y CAFCI identifica fuentes previstas y no implica afiliación, patrocinio ni aval. Las marcas pertenecen a sus respectivos titulares.
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
