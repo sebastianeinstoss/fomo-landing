@@ -1,14 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-<title id="title">FOMO app icon</title>
-<desc id="desc">Original blue chat bubble with a white and orange market-flow line.</desc>
-<rect width="512" height="512" rx="112" fill="#006BB6"/>
-<path d="M92 104 H420 Q448 104 448 132 V338 Q448 366 420 366 H258 L164 436 V366 H92 Q64 366 64 338 V132 Q64 104 92 104 Z"
-      fill="white" opacity="0.12"/>
-<path d="M100 326 L178 244 L244 278 L332 162 L410 210"
-      fill="none" stroke="white" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="100" cy="326" r="19" fill="white"/>
-<circle cx="178" cy="244" r="19" fill="white"/>
-<circle cx="244" cy="278" r="19" fill="white"/>
-<circle cx="332" cy="162" r="23" fill="#F58426" stroke="white" stroke-width="10"/>
-<path d="M372 163 L425 188 L397 239" fill="none" stroke="#F58426" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="icon-title icon-desc">
+  <title id="icon-title">Ícono de FOMO</title>
+  <desc id="icon-desc">Globo de conversación azul con una línea de mercado blanca y una flecha naranja.</desc>
+  <path d="M105 64H407C447 64 470 87 470 127V337C470 377 447 400 407 400H280L168 486V400H105C65 400 42 377 42 337V127C42 87 65 64 105 64Z" fill="#006BB6"/>
+  <path d="M105 315L190 229L269 273L350 149" fill="none" stroke="#FFFFFF" stroke-width="31" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="105" cy="315" r="17" fill="#FFFFFF"/>
+  <circle cx="190" cy="229" r="17" fill="#FFFFFF"/>
+  <circle cx="269" cy="273" r="17" fill="#FFFFFF"/>
+  <circle cx="350" cy="149" r="20" fill="#F58426" stroke="#FFFFFF" stroke-width="9"/>
+  <path d="M357 142L420 89" fill="none" stroke="#F58426" stroke-width="27" stroke-linecap="round"/>
+  <path d="M383 88H421V126" fill="none" stroke="#F58426" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

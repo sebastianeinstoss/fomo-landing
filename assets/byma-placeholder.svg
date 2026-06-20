@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="180" viewBox="0 0 520 180" role="img" aria-labelledby="title desc">
+  <title id="title">Espacio reservado para el logo de BYMA</title>
+  <desc id="desc">Reemplazar por el archivo oficial assets/byma-logo.png.</desc>
+  <rect x="2" y="2" width="516" height="176" rx="26" fill="#f7f9fc" stroke="#d8e0ea" stroke-width="4" stroke-dasharray="12 10"/>
+  <text x="260" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800" fill="#17243a">BYMA</text>
+  <text x="260" y="122" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#667085">Agregar logo oficial</text>
+</svg>

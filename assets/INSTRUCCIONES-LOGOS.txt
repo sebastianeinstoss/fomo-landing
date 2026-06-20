@@ -1,0 +1,6 @@
+REEMPLAZO DE LOGOS
+
+1. Copiar el logo oficial de BYMA a esta carpeta con el nombre: byma-logo.png
+2. Copiar el logo oficial de CAFCI a esta carpeta con el nombre: cafci-logo.png
+3. Mantener el fondo transparente cuando sea posible.
+4. No borrar los archivos placeholder: se usan como respaldo automático.
